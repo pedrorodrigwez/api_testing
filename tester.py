@@ -1,5 +1,6 @@
 """
-Purpose: Test some testing
+Purpose: Test some testing with a public API 
+Public Endpoint Docs: https://alexwohlbruck.github.io/cat-facts/
 
 """
 import requests
