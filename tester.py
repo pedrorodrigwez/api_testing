@@ -10,7 +10,7 @@ url_base = "https://cat-fact.herokuapp.com"
 
 def cat_fact:
     """
-    Testint Kitty API
+    Testing Kitty API
     """
     r = requests.get(url_base+'/facts/random')
     response = r.json()
