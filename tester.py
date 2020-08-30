@@ -8,9 +8,9 @@ import requests
 url_base = "https://cat-fact.herokuapp.com"
 
 
-def cat_fact:
+def cat_fact():
     """
-    Testing Kitty API
+    Fetch a Random Fact from the api
     """
     r = requests.get(url_base+'/facts/random')
     response = r.json()
