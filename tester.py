@@ -11,11 +11,20 @@ url_base = "https://cat-fact.herokuapp.com"
 
 def cat_fact():
     """
+    
     Fetch a Random Fact from the api
+
     """
-    r = requests.get(url_base+'/facts/random')
-    response = r.json()
-    fact=response['text']
+    try:
+        r = requests.get(url_base+'/facts/random')
+        r.raise_for_status()
+    except requests.exceptions.HTTPError as err:
+        raise SystemExit(err)
+    if r.status_code == 200:
+        response = r.json()
+        fact = response['text']
+    else:
+        fact = None
     return fact
 
 
